@@ -33,7 +33,7 @@ def add(request):
     anos = float(request.POST["anos"])
     altura = float(request.POST["altura"])
     peso = float(request.POST["peso"])
-    imc = peso / (altura/100*altura/100)
+    imc = round(peso / (altura/100*altura/100),1)
 
 
     if genero == 1:
@@ -139,7 +139,18 @@ def calculadora(request):
 
     variaveis = objeto.values()
     #print(variaveis['genero'])
+    global peso
+    peso =1
+    global altura
+    altura =1
+    global genero
+    genero =1
+    global anos
+    anos =1
+    global atividade
+    atividade =1
     for valores in objeto.values():
+        
         genero = valores['genero']
         anos = valores['idade']
         peso = valores['peso']
