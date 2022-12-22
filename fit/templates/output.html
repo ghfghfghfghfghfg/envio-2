@@ -1,0 +1,924 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block main %}
+
+
+<style>
+
+.left{
+
+  padding-top: 0px;
+
+  padding-right: 0px;
+
+  padding-bottom: 0px;
+
+  padding-left: 200px;
+
+}
+
+</style>
+
+<div class="container text-center">
+
+
+  {% block content %}
+
+  <h1><strong>Com base mas suas informaçoes esse e o  resultado:</h1></strong>
+
+
+ 
+
+<div class="container">
+
+    <div class="row">
+
+<div class="col-6">
+
+<p>Suas calorias de manutenção: </p>
+
+<div class="left">
+
+  <div class="card" style="width: 14rem;">
+
+      <div class="card-body">
+
+          <h5 class="card-title">{{tupla.0}}</h5>
+
+          <h6 class="card-subtitle mb-4 text-muted">Calorias por dia</h6>
+
+          <hr>
+
+          <h5 class="card-title">{{tupla.1}}</h5>
+
+          <h6 class="card-subtitle mb-4 text-muted">Calorias por semana</h6>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="col-6">
+
+<p>Com base em suas estatísticas, a melhor estimativa para suas calorias de manutenção é
+
+    xxxxx calorias por dia.
+
+    A tabela abaixo mostra a diferença se você tiver selecionado um nível de atividade diferente.</p>
+
+<table class="table">
+
+    <thead>
+
+      <tr>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <th scope="row">Taxa Metabólica Basal</th>
+
+        <td>{{tupla.2}} calorias dia</td>
+
+
+      </tr>
+
+      <tr>
+
+        <th scope="row">Sedentário</th>
+
+        <td>{{tupla.3}} calorias dia</td>
+
+
+      </tr>
+
+      <tr>
+
+        <th scope="row">Exercício leve</th>
+
+        <td colspan="2">{{tupla.4}} calorias dia</td>
+
+
+      </tr>
+
+      <tr>
+
+        <th scope="row">Exercício Moderado</th>
+
+        <td>{{tupla.5}} calorias dia</td>
+
+
+      </tr>
+
+      <tr>
+
+        <th scope="row">Exercício Pesado</th>
+
+        <td colspan="2">{{tupla.6}} calorias dia</td>
+
+
+      </tr>
+
+      <tr>
+
+        <th scope="row">Atleta</th>
+
+        <td colspan="2">{{tupla.7}} calorias dia</td>
+
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+</div>
+
+</div>
+
+
+<hr>
+
+
+    <div class="row">
+
+    
+
+
+    <div class="center">
+
+      <h2><strong>Pontuação do IMC: {{tupla.8}}</h2></strong>
+
+<p> Seu IMC é {{tupla.8}} o que significa que você é classificado como …
+
+    
+
+   </p>
+
+
+
+
+
+    <table class="table">
+
+        <thead>
+
+          <tr>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <th scope="row">18,5 ou menos</th>
+
+            <td>Subpeso
+
+            </td>
+
+    
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">18,5 – 24,99</th>
+
+            <td>Peso normal</td>
+
+    
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">25 – 29,99</th>
+
+            <td colspan="2">Sobrepeso</td>
+
+    
+
+          </tr>
+
+          <tr>
+
+            <th scope="row">30 +</th>
+
+            <td colspan="2">Obeso</td>
+
+    
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+</div>
+
+
+<hr>
+
+
+  
+
+  <div class="row">
+
+    <div class="col-sm-5 col-md-6">
+
+<h2><strong>FFMI ideal Homen:</strong></h2>
+
+<h3>Sua porcentagem de gordura:{{tupla.9}}%</h3>
+
+<p> Seu FFMI é {{tupla.10}}, o que significa que você é classificado como …
+
+  
+
+</p>
+
+
+
+
+  <table class="table">
+
+      <thead>
+
+        <th scope="col">FFMI</th>
+
+        <th scope="col">Gordura corporal</th>
+
+        <th scope="col">Descrição</th>
+
+       
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <th scope="row">17-18</th>
+
+          <th scope="row">10-18%</th>
+
+          <td>Homem magro</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">18-20</th>
+
+          <th scope="row">20-27%</th>
+
+          <td>Homem comum</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">19-21</th>
+
+          <th scope="row">25-40%</th>
+
+          <td colspan="2">Homem gordo</td>
+
+          
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">20-21</th>
+
+          <th scope="row">10-18%</th>
+
+          <td>Usuário de atleta / academia intermediária</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">22-23</th>
+
+          <th scope="row">6-12%</th>
+
+          <td>Usuário avançado de academia</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">24-25</th>
+
+          <th scope="row">8-20%</th>
+
+          <td colspan="2">Bodybuilder / Powerlifter / Weightlifter</td>
+
+          
+
+  
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+
+  <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+
+    <h2><strong>FFMI ideal Mulher:</h2></strong>
+
+    <h3>Sua porcentagem de gordura:{{tupla.11}}%</h3>
+
+    <p> Seu FFMI é {{tupla.12}}, o que significa que você é classificado como ...
+
+  
+
+ </p>
+
+
+
+
+
+  <table class="table">
+
+      <thead>
+
+        <th scope="col">FFMI</th>
+
+        <th scope="col">Gordura corporal</th>
+
+        <th scope="col">Descrição</th>
+
+       
+
+      </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <th scope="row">14-15</th>
+
+          <th scope="row">20-25%</th>
+
+          <td>Mulheres magras</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">14-17</th>
+
+          <th scope="row">22-35%</th>
+
+          <td>Mulheres médias</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">15-18</th>
+
+          <th scope="row">30-45%</th>
+
+          <td colspan="2">Mulheres gordas</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">16-17</th>
+
+          <th scope="row">18-25%</th>
+
+          <td>Usuário de atleta / academia intermediária</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">18-20</th>
+
+          <th scope="row">15-22%</th>
+
+          <td>Usuário avançado de academia</td>
+
+  
+
+        </tr>
+
+        <tr>
+
+          <th scope="row">19-21</th>
+
+          <th scope="row">15-30%</th>
+
+          <td colspan="2">Bodybuilder / Powerlifter / Weightlifter
+
+          </td>
+
+          
+
+  
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+
+<hr>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+
+  <li class="nav-item" role="presentation">
+
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Manutenção</button>
+
+  </li>
+
+  <li class="nav-item" role="presentation">
+
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Cutting</button>
+
+  </li>
+
+  <li class="nav-item" role="presentation">
+
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Bulking</button>
+
+  </li>
+
+ 
+
+</ul>
+
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+<p>Esses valores de macronutrientes refletem suas calorias de manutenção de {{tupla.0}} calorias por dia.</p>
+
+
+<div class="container text-center">
+
+  <div class="row align-items-start">
+
+    <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Baixo teor de gordura</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.15}} carboidrato</li>
+
+        <li class="list-group-item">{{tupla.16}} preteina</li>
+
+        <li class="list-group-item">{{tupla.17}} gordura</li>
+
+      </ul>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Carboidratos baixos</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.21}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.22}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.23}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Alta proteína</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.29}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.30}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.31}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+
+
+<p>Esses valores de macronutrientes refletem suas calorias de corte de {{tupla.13}} calorias por dia, que é um déficit de 500 calorias por dia devido à manutenção de {{tupla.0}} calorias por dia.
+
+
+</p>
+
+    
+
+
+<div class="container text-center">
+
+  <div class="row align-items-start">
+
+    <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Baixo teor de gordura </h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.18}} carboidrato</li>
+
+        <li class="list-group-item">{{tupla.19}} preteina</li>
+
+        <li class="list-group-item">{{tupla.20}} gordura</li>
+
+      </ul>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Carboidratos baixos</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.24}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.25}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.26}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Alta proteína</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.32}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.33}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.34}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+
+
+<p>Esses valores de macronutrientes refletem suas calorias volumosas de {{tupla.14}} calorias por dia, que são + 500 calorias por dia, com a manutenção de {{tupla.0}} calorias por dia.
+
+
+</p>
+
+  
+
+<div class="container text-center">
+
+  <div class="row align-items-start">
+
+    <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Baixo teor de gordura</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.21}} carboidrato</li>
+
+        <li class="list-group-item">{{tupla.22}} preteina</li>
+
+        <li class="list-group-item">{{tupla.23}} gordura</li>
+
+      </ul>
+
+    </div>
+
+
+
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Carboidratos baixos </h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.27}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.28}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.29}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="col">
+
+
+    <div class="card" style="width: 18rem;">
+
+      <div class="card-body">
+
+        <h5 class="card-title">Alta proteína</h5>
+
+        </div>
+
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">{{tupla.35}}  carboidrato</li>
+
+        <li class="list-group-item">{{tupla.36}}  preteina</li>
+
+        <li class="list-group-item">{{tupla.37}}  gordura</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+
+  </div>
+
+ 
+
+
+
+
+
+  
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+<br>
+
+<br>
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-9">
+
+<h4>Ferramentas de rastreamento de calorias
+
+</h4>
+
+<p>Existem apenas três ferramentas necessárias para rastrear suas calorias de maneira eficaz…
+
+</p>
+
+<div class="container">
+
+  <div class="row">
+
+<div class="col-4"><img src="{% static 'img/food-scale.jpg' %}" class="img-thumbnail" alt="..."></div>
+
+<div class="col-6"><strong>Balança de Alimentos</strong>
+
+<br>
+
+  Você precisará de uma Balança de alimentar para medir com precisão as calorias dos alimentos que está comendo ( a maioria das pessoas subestima muito tempo! )
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+  <div class="row">
+
+<div class="col-4">  <img src="{% static 'img/bathroom-scale.jpg' %}" class="img-thumbnail" alt="..."> </div>
+
+<div class="col-6"><strong>Balança de banheiro</strong>
+
+<br>
+
+  Você precisará de uma balança de banheiro para se pesar periodicamente para poder acompanhar seus resultados.
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="container">
+
+  <div class="row">
+
+<div class="col-4"><img src="{% static 'img/myfitnesspal.jpg' %}" class="img-thumbnail" alt="..."></div>
+
+<div class="col-6"><strong>MyFitnessPal App</strong>
+
+<br>
+
+  Você precisará inserir tudo o que comer em um aplicativo de rastreador de calorias como o MyFitnessPal
+
+  <br>
+
+  MyFitnessPal é gratuito e funciona no iOS / Android. Encontre-o na loja de aplicativos
+
+  
+
+  
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+</div></div>
+
+
+
+
+</div>
+
+</div>
+
+{% endblock  %}
+
+{% endblock main %}

@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block main %}
+
+
+{% for post in posts%}
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+          <a href="/posts/{{ post.pk }}">  
+
+        </div>
+        <div class="col-4">
+            <h2>{{post.titulo }}</h2></a>
+            <h3>{{post.autor}}</h3>
+        
+            <p>{{post.resumo|safe}}</p>
+
+        </div>
+    </a>
+    </div>
+    <hr>
+</div>
+
+</div>
+{% endfor %}
+
+
+</div>
+{% endblock main %}

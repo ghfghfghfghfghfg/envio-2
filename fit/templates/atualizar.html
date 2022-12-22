@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+{% block main %}
+{% load crispy_forms_tags%}
+
+<br>
+<br>
+   <!-- 2 column grid layout with text inputs for the first and last names -->
+
+   <form action="" method="POST">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+
+    
+    {% csrf_token %}           
+    <div class="container text-center">
+        <div class="row align-items-start">
+          <div class="col">
+   {{form|crispy}}
+
+
+   
+   {%autoescape off%}
+
+   {% endautoescape %}
+
+   <br>
+   
+   <button type="submit" class="btn btn-primary btn-block mb-4">
+   {{botao}}
+
+
+   </button>
+</div></div></div>
+ </form>
+
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+{% endblock main %}
