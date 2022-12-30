@@ -37,8 +37,8 @@ ATIVIDADE=[
 
 class Perfil(models.Model):
     genero = models.CharField(max_length=150,choices=LISTA_SEXO,default='Masculino',null=True)
-    idade = models.IntegerField(max_length=2,null=True)
-    peso = models.IntegerField(max_length=3,null=True)
+    idade = models.IntegerField(null=True)
+    peso = models.IntegerField(null=True)
     altura = models.CharField(max_length=3,null=True)
     atividade_fisica = models.CharField(max_length=150,choices=ATIVIDADE,default='Feminino',null=True)
     #imc = (float(idade)-float(peso))
